@@ -8,4 +8,4 @@ doubleMe x = x + x
 signo :: Int -> Int
 signo x | x > 0 = 1   --este signito significa que estas haciendo cosas logicas, tipo preposiciones
         | x < 0 = -1
-        | otherwise = 0
+        | otherwise = 0 --aaa
