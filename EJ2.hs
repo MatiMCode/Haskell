@@ -25,3 +25,10 @@ sumaDistintos x y z| (y==z) && (y/=x) = x
                    | (z==x) && (x/=y) = y
                    | (x/=y) && (x/=z) = x+y+z 
                    |otherwise = 0
+
+
+--digitoUnidades
+
+digitoUnidades :: Int -> Int 
+digitoUnidades n| n>=0 = mod n 10
+            |otherwise = mod (-n) 10
