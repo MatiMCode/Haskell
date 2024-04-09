@@ -1,11 +1,38 @@
+
+--c)
 maximo3 :: Int -> Int -> Int -> Int
 maximo3 a b c | (a>=b) && (a>c) = a
               | (b>a) && (b>c) =b
               | otherwise = c
 
---2 2 1
 
---Suma distintos
+
+
+
+
+
+
+--d)    algunoEsCero
+
+--problema algunoEsCero (x,y:R):booleano {
+-- requiere {true}
+-- asegura {res = true si x=0 o y=0}
+--}
+
+algunoEsCero :: Int -> Int -> Bool
+algunoEsCero x y = (x==0) || (y==0)
+
+
+
+algunoEsCeroPM :: Int -> Int -> Bool
+algunoEsCeroPM x 0 = True
+algunoEsCeroPM 0 y = True
+algunoEsCeroPM x y = False
+
+
+
+
+--g)   Suma distintos
 
 
 -- problema sumaDistintos (x,y,z : Z):Z{
