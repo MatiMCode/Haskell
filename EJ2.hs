@@ -32,3 +32,18 @@ sumaDistintos x y z| (y==z) && (y/=x) = x
 digitoUnidades :: Int -> Int 
 digitoUnidades n| n>=0 = mod n 10
             |otherwise = mod (-n) 10
+
+
+
+
+--digitoDecenas
+
+-- problema digitoDecenas (x:Z):Z{
+--      requiere{true}
+--      asegura{si el numero es mayor a 10, res= x/10}
+--      asegura{si el numero es menor a 10 res=0}
+--}
+
+digitoDecenas :: Int -> Int 
+digitoDecenas n| n>=10 = div (mod n 100) 10
+               | otherwise = 0
