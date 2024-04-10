@@ -2,6 +2,7 @@
 
 
 --a*a + a*b*x =0
+--x = -a*a /a*b
 --x = -(a)/b
 
 estanRelacionados :: Int -> Int -> Bool
