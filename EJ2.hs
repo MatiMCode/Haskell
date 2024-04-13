@@ -73,4 +73,5 @@ digitoUnidades n| n>=0 = mod n 10
 
 digitoDecenas :: Int -> Int 
 digitoDecenas n| n>=10 = div (mod n 100) 10
-               | otherwise = 0
+               | n==0 = 0
+               | n<0   = div (mod n (-100)) 10
