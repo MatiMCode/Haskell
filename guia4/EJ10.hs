@@ -13,5 +13,6 @@ f3 indice q | indice == 0 = 1
             | otherwise = q^(indice*2) + q^((indice*2)-1) + f3 (indice-1)  q
 
 f4 :: Int -> Float -> Float
-f4 n q | n<1 = 0
-       | 
+f4 indice q | indice == 0 = 1
+            | indice == 1 = q^(indice*2) + q
+            | otherwise = q^(indice*2) + q^((indice*2)-1) -q^(indice-1) + f4 (indice-1)  q
