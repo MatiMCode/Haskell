@@ -1,0 +1,2 @@
+--tomaValorMaximo, dado un numero natural1 y natural2 devuelve un numero m entre esos dos tal que
+-- suma de los divisores de M = maximo de suma divisores i
