@@ -1,7 +1,7 @@
-serie2 :: Int -> Int -> Float
-serie2 m p | m==1 = p
-           | otherwise = p/m + (serie2 (m-1) p)
-
 serie1 :: Int -> Int -> Float
-serie1 n m | n==1 = serie2(m,1)
-           | otherwise = (serie2 m n) + (serie1 (n-1) m)
+serie1 q p | q==1 = fromIntegral p
+           | otherwise = (fromIntegral p)/(fromIntegral q) + (serie1 (q-1) p)
+
+serie2 :: Int -> Int -> Float
+serie2 p q | p==1 = serie1 q p 
+           | otherwise = (serie1 q p)  + (serie2 q (p-1))
