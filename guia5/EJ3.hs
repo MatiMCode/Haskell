@@ -41,12 +41,21 @@ ultimo (x:xs) = ultimo xs
 sumarElUltimo :: [Int] -> [Int]
 sumarElUltimo (x:xs) = sumarN (ultimo xs) (x:xs)
 
+--7) pares das una lista y devuelve lista, 
+
 --9)
 
 quitar :: Eq(a) => a -> [a] -> [a]
 quitar n (x:xs) | n==x = xs
                 | otherwise = x : quitar n xs
 
+compararNums :: Int -> Int -> Int
+compararNums n m | n>m = n
+                 | otherwise = m
+
+maximo :: [Int] -> Int
+maximo (x:[]) = x
+maximo (x:xs) = compararNums x (maximo xs)
 
 ordenar :: [Int] -> [Int]
 ordenar [] = []

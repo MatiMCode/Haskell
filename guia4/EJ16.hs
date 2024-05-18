@@ -27,7 +27,19 @@ sonCoprimos n m = not ((mod m (menorDivisorEmpezandoPor 2 n)) == 0) || ((mod n (
 
 --d) nEsimoPrimo::Int Int  devuelve el nesimo primo n>=1
 
+
+--el primer valor es el enesimo y el segundo es el numero actual a evaluar
+
+
+
+
+
+contadorDePrimos :: Int -> Int -> Int
+contadorDePrimos n p | esPrimo p && n == 1 = p
+                     | esPrimo p = contadorDePrimos (n-1) (p+1)
+                     | otherwise = contadorDePrimos n (p+1)
+
 nEsimoPrimo :: Int -> Int
-nEsimoPrimo n | esPrimo n = n
-              | otherwise = nEsimoPrimo (n-1)
+nEsimoPrimo 1 = 2
+nEsimoPrimo n = contadorDePrimos (n+1) 1
 
